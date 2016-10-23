@@ -28,13 +28,55 @@ button {
 strong {
 	color: white;
 }
+img {
+	width:100%;
+	height:100%;
+}
+#portrait
+{
+width:240px;
+height:300px;
+
+animation:myfirst 5s linear infinite;
+-moz-animation:myfirst 5s linear infinite; /* Firefox */
+-webkit-animation:myfirst 5s linear infinite; /* Safari and Chrome */
+-o-animation:myfirst 5s linear infinite; /* Opera */
+}
+
+#thoreau
+{
+width:240px;
+height:300px;
+}
+
+@keyframes myfirst
+{
+0%,100%   {transform: rotate(0deg)}
+10%	{transform: rotate(2deg)}
+20% {transform: rotate(0deg)}
+30% {transform: rotate(-2deg)}
+40% {transform: rotate(0deg)}
+50% {transform: rotate(2deg)}
+60% {transform: rotate(0deg)}
+70%	{transform: rotate(-2deg)}
+80%	{transform: rotate(0deg)}
+90% {transform: rotate(2deg)}
+
+
+}
+
 </style>
 </head>
 <body>
-	<div id='portrait'><img src='img/thoreau.jpg'></img></div>
+	<div id='thoreau'><img src='img/Henry_David_Thoreau.jpg'></img></div>
 	<div id="output" style="height: 300px; overflow: auto; overflow-x: hidden;"></div>
 	<input type="text" id="input" style="max-width: 500px; width: 70%" />
 	<button id="submit" onclick="javascript:;">Submit</button>
+	<div>
+	<div id='portrait' style="position: absolute; left:50%; top:1%;"></div>
+	<h2 id='portraitName'></h2>
+	<h3 id='portraitSpeech'></h3>
+	</div>
 	<script type="text/javascript" src="world.js"></script>
 	<script type="text/javascript" src="player.js"></script>
 	<script type="text/javascript" src="oldhouse.js"></script>
